@@ -1,0 +1,15 @@
+/* Header.module.css */
+.module {
+  padding: 16px;
+  .list{
+    display: flex;
+  }
+}
+.wrapper{
+  display: flex;
+justify-content: flex-end;
+}
+.list{
+margin: 30px 20px;
+padding: 10px;
+}

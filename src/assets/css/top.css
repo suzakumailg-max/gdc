@@ -1,0 +1,279 @@
+@charset "utf-8";
+/* =====================キービジュアルここから===================== */
+.key-visual{
+    position: relative;
+    aspect-ratio: 16 / 8;
+    overflow: hidden;
+}
+.key-visual video{
+    width: 100%;
+}
+.key-visual h2{
+    width: 37.5vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.key-visual .scroll{
+    position: absolute;
+    left: 5.2%;
+    bottom: 200px;
+    color: #fff;
+    transform: rotate(90deg);
+}
+.key-visual .scroll::after{
+    content: "";
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 120%;
+    top: 50%;
+    transform-origin: left;
+    animation: scroll 1.5s ease-in infinite;
+}
+@keyframes scroll{
+    0%{transform: scaleX(0);}
+    90%{transform: scaleX(1);opacity: 1;}
+    100%{opacity: 0;}
+}
+/* =====================キービジュアルここまで===================== */
+
+/* =====================メインコンテンツここから===================== */
+.main-cont{
+    padding-bottom: 150px;
+}
+.main-cont-item{
+    display: flex;
+    align-items: flex-start;
+    padding-top: 150px;
+}
+.main-cont-item:nth-child(2){
+    flex-direction: row-reverse;
+}
+.main-cont-text{
+    width: 50%;
+}
+.main-cont-item:nth-child(1) .main-cont-text{
+    padding-right: 5%;
+}
+.main-cont-item:nth-child(2) .main-cont-text{
+    padding-left: 5%;
+}
+.main-cont-item img{
+    width: 50%;
+
+}
+/* =====================メインコンテンツここまで===================== */
+
+/* =====================ショップリストここから===================== */
+.shop-list{
+    padding-bottom: 150px;
+}
+.shop-list .inner{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 20px;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; */
+}
+/* .shop-list-item{
+    flex-basis: fit-content;
+} */
+.shop-list-item img{
+    width: 100%;
+}
+.shop-list-item-text{
+    padding: 40px 10% 10%;
+    border: solid #333;
+    border-width: 0 1px 1px;
+}
+.shop-list-item-text h3{
+    font-size: 2.8rem;
+    font-weight: normal;
+    line-height: 1;
+    text-align: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #333;
+}
+.shop-list-item-text dl{
+    font-size: 1.4rem;
+    margin-top: 40px;
+}
+.shop-list-item-text dl div{
+    display: flex;
+}
+.shop-list-item-text dt{
+    width: 30%;
+    text-align: right;
+    padding-right: 1em;
+}
+.shop-list-item-text dd{
+    width: 70%;
+}
+.shop-list-item-text dt,
+.shop-list-item-text dd{
+    height: 3.6em;
+}
+.shop-list-item .gmap-btn{
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #ddd4ca;
+    height: 50px;
+    position: relative;
+    transition: 0.2s ease-in-out;
+    white-space: nowrap;
+}
+.shop-list-item .gmap-btn span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+.shop-list-item .gmap-btn:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #703B1F;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.2s ease-in-out;
+}
+.shop-list-item .gmap-btn:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.shop-list-item .gmap-btn:hover{
+    color: #fff;
+}
+/* @media (max-width:1450px){
+    .shop-list-item-text dl div{
+        flex-direction: column;
+    }
+    .shop-list-item-text dt,
+    .shop-list-item-text dd{
+        width: 100%;
+        text-align: center;
+    }
+    .shop-list-item-text dt{
+        height: 1.8em;
+        padding: 0;
+        margin-top: 0.5em;
+        border-bottom: 1px dotted #999;
+    }
+} */
+/* =====================ショップリストここまで===================== */
+
+/* =====================ニュースここから===================== */
+
+.news-list{
+    border-top: 1px solid #707070;
+}
+.news-item{
+    border-bottom: 1px solid #707070;
+    display: flex;
+    padding: 40px 10%;
+}
+.news-item dt{
+    width: 5em;
+    white-space: nowrap;
+    
+}
+.news-item dd{
+    padding-left: 1.5em;
+}
+/* =====================ニュースここまで===================== */
+
+
+/* ブレイクポイント768px（タブレット用） */
+@media ( max-width:768px ){
+     /* =====================メインコンテンツここから=====================m */
+    .main-cont{
+        width: 100%;
+        padding-bottom: 100px;
+    }
+    .main-cont-item,
+    .main-cont-item:nth-child(2){
+        flex-direction: column;
+    }
+    .main-cont-text{
+        width: 85%;
+        margin: 0 auto 40px;
+    }
+    .main-cont-item:nth-child(1) .main-cont-text,
+    .main-cont-item:nth-child(2) .main-cont-text{
+        padding: 0;
+    }
+    .main-cont-text h2{
+        text-align: center;
+    }
+    .main-cont-item img{
+        width: 100%;
+    }
+
+    /* =====================メインコンテンツここまで=====================m */
+}
+@media ( max-width: 520px ){
+    /* =====================キービジュアルここから=====================m */
+    .key-visual{
+        aspect-ratio: inherit;
+        height: 100vh;
+    }
+    .key-visual video{
+        width: auto;
+        height: 100vh;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+    }
+    .key-visual h2{
+        width: 81.6vw;
+        top: 40%;
+    }
+
+    /* =====================キービジュアルここまで=====================m */
+
+    /* =====================スリックここから=====================m */
+    .slider{
+        width: 100%;
+    }
+    .slick-slide{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    /* =====================スリックここまで=====================m */
+
+    /* =====================ショップリストここから=====================m */
+    .shop-list-item-text .address{
+        height: 5.4em;
+    }
+    /* =====================ショップリストここまで=====================m */
+
+    /* =====================ニュースここから=====================m */
+    .news-item{
+        flex-direction: column;
+        padding: 25px 0 45px;
+    }
+    .news-item dt{
+        width: 100%;
+        margin-bottom: 18px;
+    }
+    .news-item dd{
+        padding-left: 0;
+    }
+    /* =====================ニュースここまで=====================m */
+}
