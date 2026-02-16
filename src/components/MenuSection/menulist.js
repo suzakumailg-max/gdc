@@ -1,6 +1,6 @@
-import menu1 from "src/assets/images/menu1-min.jpg";
-import menu2 from "src/assets/images/menu2-min.jpg";
-import menu3 from "src/assets/images/menu3-min.jpg";
+import menu1 from "../../assets/images/menu1-min.jpg";
+import menu2 from "../../assets/images/menu2-min.jpg";
+import menu3 from "../../assets/images/menu3-min.jpg";
 
 export const menuList = [
     {
@@ -24,7 +24,6 @@ export const menuList = [
         image: menu2,
         alt: "Other Drink",
         menus: [
-            { ç },
             { name: "オレンジジュース", price: "500円" },
             { name: "コカコーラ", price: "500円" },
             { name: "トニックウォーター", price: "500円" },

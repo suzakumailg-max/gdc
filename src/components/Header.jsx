@@ -11,19 +11,20 @@ const menuList = [
   {name:'contact'}];
 
 function Header() {
-  const topText = menuList.map((menu)=>{
+  const topText = menuList.map((menu,index)=>{
   return (
-      <li   className={styles.list} key={menu.name}>
+      <li  key={index} className={styles.list} >
       <a href="#">{menu.name}</a></li>
   );
 });
 return(
       <nav>
       <div className={styles.module}>
+      <img src =  {topImg} alt = "Good Day Coffeeのメッセージロゴ" className={styles.topImg} />
       <ul className={styles.wrapper}>
         {topText}
       </ul>
-      <img src =  {topImg} alt = "Good Day Cofeeのメッセージロゴ"/>
+
       </div>
       </nav>
       );
