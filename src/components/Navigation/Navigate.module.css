@@ -1,0 +1,16 @@
+.inner {
+    max-width: 1396px;
+    margin-inline: auto;
+}
+
+.navList {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.link {
+    color: var(--textColorWhite);
+    text-decoration: none;
+    font-size: 16px;
+}
